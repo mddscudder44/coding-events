@@ -10,11 +10,11 @@ import java.util.Objects;
  * Created by Chris Bay
  */
 @Entity
-public class EventCategory {
+public class EventCategory extends AbstractEntity {
 
-    @Id
+  /*  @Id
     @GeneratedValue
-    private int id;
+    private int id;*/
 
     @Size(min=3, message="Name must be at least 3 characters long")
     private String name;
@@ -33,15 +33,17 @@ public class EventCategory {
         this.name = name;
     }
 
-    public int getId() {
+/*    public int getId() {
         return id;
     }
+
+ */
 
     @Override
     public String toString() {
         return name;
     }
-
+/*
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -50,8 +52,12 @@ public class EventCategory {
         return id == that.id;
     }
 
-    @Override
+ */
+
+ /*   @Override
     public int hashCode() {
         return Objects.hash(id);
     }
+
+  */
 }
